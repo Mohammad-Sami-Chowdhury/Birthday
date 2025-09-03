@@ -11,8 +11,8 @@ import moumita3 from "./assets/moumita3.jpg";
 function App() {
   const photos = [
     { id: 1, src: moumita1, name: "Moumita", caption: "Birthday Girl" },
-    { id: 2, src: moumita2, name: "Moumita", caption: "Special Day" },
-    { id: 3, src: moumita3, name: "Moumita", caption: "Celebration" },
+    { id: 2, src: moumita2, name: "Moumita", caption: "Princess" },
+    { id: 3, src: moumita3, name: "Moumita", caption: "Love" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -74,7 +74,7 @@ function App() {
   };
 
   return (
-    <div className="font-dancing flex items-center justify-center min-h-screen p-4 overflow-hidden bg-neutral-100 font-sans">
+    <div className="font-dancing flex items-center justify-center min-h-screen p-4 overflow-hidden bg-neutral-100">
       <div className="relative w-full max-w-[1200px] min-h-[500px] h-auto lg:h-[700px] p-4 md:p-6 lg:p-8 bg-[#fffaf6] rounded-2xl shadow-xl flex flex-col lg:flex-row items-center justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10">
         {/* Floating shapes - responsive positioning and sizing */}
         <motion.img className="absolute top-2 left-2 md:top-5 md:left-8 opacity-70 z-10 w-[60px] md:w-[100px] lg:w-[150px] xl:w-[200px] rotate-[45deg]" src={block1} alt="" {...float} />
@@ -85,7 +85,7 @@ function App() {
         <motion.img className="absolute -bottom-2 -right-4 md:-bottom-5 md:-right-20 opacity-70 w-[60px] md:w-[100px] lg:w-[150px] xl:w-[200px] z-10 rotate-[45deg]" src={block1} alt="" {...float} />
 
         {/* Photo Stack */}
-        <div className="relative w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 h-auto mt-8 md:mt-0">
+        <div className="relative w-48 sm:w-56 md:w-64 lg:w-72 xl:w-80 h-auto md:mt-0">
           {photos.map((photo, index) => {
             if (index === currentIndex) return null;
             const offset = (index - currentIndex) * (isMobile ? 2 : 3);
@@ -158,7 +158,7 @@ function App() {
                   className="object-cover w-full h-full rounded-sm pointer-events-none"
                 />
               </div>
-              <div className="font-dancing text-center mt-2 text-xs md:text-sm text-stone-700 uppercase tracking-widest pointer-events-none">
+              <div className="font-dancing text-center mt-2 text-md md:text-md text-black uppercase tracking-widest pointer-events-none">
                 {photos[currentIndex].name}
               </div>
             </motion.div>
@@ -185,7 +185,7 @@ function App() {
 
         {/* Right text - responsive adjustments */}
         <motion.div
-          className="relative flex flex-col items-center lg:items-start text-stone-800 font-serif order-first lg:order-none mb-4 lg:mb-0"
+          className="relative flex flex-col items-center lg:items-start text-stone-800 font-serif order-first lg:order-none lg:mb-0"
           {...float}
         >
           <div className="font-dancing text-xl sm:text-2xl md:text-3xl font-semibold tracking-wider mb-1 md:mb-2">HAPPY</div>
@@ -195,7 +195,7 @@ function App() {
           >
             Birthday
           </div>
-          <div className="mt-2 md:mt-4 text-sm md:text-md font-dancing text-stone-700 italic">
+          <div className="md:mt-4 text-md md:text-2xl font-dancing text-stone-700 italic">
             {photos[currentIndex].caption}
           </div>
         </motion.div>
