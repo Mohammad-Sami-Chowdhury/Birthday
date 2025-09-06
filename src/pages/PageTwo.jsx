@@ -17,6 +17,7 @@ function PageTwo() {
   const [showLetter, setShowLetter] = useState(false);
   const [letterText, setLetterText] = useState("");
   const [titleText, setTitleText] = useState("");
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   const datetxt = "28 November 2025";
   const datatxtletter =
@@ -24,6 +25,12 @@ function PageTwo() {
   const titleLetter = "TTo you";
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    
     const timer = setTimeout(() => {
       const dateElement = document.querySelector(".date__of__birth");
       if (dateElement) {
@@ -37,7 +44,10 @@ function PageTwo() {
       }
     }, 13000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('resize', handleResize);
+    };
   }, []);
 
   const handleOpenLetter = () => {
@@ -135,7 +145,7 @@ function PageTwo() {
               <span style={{ animationDelay: "4.4s" }}>y</span>
             </h1>
             <div className="hat">
-              <img src={hat} alt="" width="130" />
+              <img src={hat} alt="" width={isMobile ? "80" : "130"} />
             </div>
           </div>
           <div className="date__of__birth">
@@ -159,10 +169,10 @@ function PageTwo() {
               <i className="fa-solid fa-heart"></i>
             </div>
             <div className="balloon_one">
-              <img width="100px" src={balloon1} alt="" />
+              <img width={isMobile ? "70" : "100"} src={balloon1} alt="" />
             </div>
             <div className="balloon_two">
-              <img width="100px" src={balloon2} alt="" />
+              <img width={isMobile ? "70" : "100"} src={balloon2} alt="" />
             </div>
           </div>
         </div>
@@ -185,7 +195,7 @@ function PageTwo() {
         <img src={decorate} alt="" width="100" />
       </div>
       <div className="smiley__icon">
-        <img src={smiley} alt="" width="100" />
+        <img src={smiley} alt="" width={isMobile ? "70" : "100"} />
       </div>
 
       {showLetter && (
@@ -227,12 +237,12 @@ function PageTwo() {
                 </div>
                 <div className="right">
                   <div className="love__img">
-                    <img src={gif1} alt="" width="220" />
+                    <img src={gif1} alt="" width={isMobile ? "120" : "220"} />
                   </div>
                   <div className="text__letter">
                     <p>{letterText}</p>
                   </div>
-                  <img id="mewmew" width="80" src={mewmew} alt="" />
+                  <img id="mewmew" width={isMobile ? "50" : "80"} src={mewmew} alt="" />
                 </div>
               </div>
             </div>

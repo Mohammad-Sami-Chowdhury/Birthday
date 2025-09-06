@@ -80,6 +80,7 @@ body {
   position: relative;
   display: flex;
   padding-top: 3rem;
+  flex-wrap: wrap;
 }
 .content .left,
 .content .right {
@@ -667,166 +668,103 @@ body {
   cursor: pointer;
 }
 
-@media screen and (max-width: 658px) {
-  .flag__birthday .flag__left {
-    transform: rotate(-10deg) translate(-119px, 3px);
-  }
-
-  .flag__birthday .flag__right {
-    transform: rotate(10deg) translate(-106px, 39px) scaleX(-1);
-  }
-
-  .content {
-    width: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 25px;
-    align-items: center;
-    padding-top: 2rem;
-  }
-
-  .title {
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    font-family: "Titan One", sans-serif;
-    font-size: 1.5rem;
-    letter-spacing: 8px;
-    flex-direction: column;
-    perspective: 1000px;
-  }
-
-  #btn__letter {
-    position: relative;
-    margin-top: 17px;
-    width: 209px;
-    background-color: var(--color-text-pink);
-    outline: none;
-    padding: 6px 4px;
-    font-size: 1rem;
-    border-radius: 50px;
-    border: 3px solid var(--color-black);
-    font-family: "Sriracha", cursive;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 2;
-    transition: all 0.5s ease-in-out;
-  }
-
-  .cricle {
-    position: absolute;
-    top: 10px;
-    right: -54px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0);
-    animation: scaleCricle 3s 15s forwards ease-in-out;
-  }
-
-  .title .hat {
-    position: absolute;
-    right: -98px;
-    top: -51px !important;
-    transform: rotate(-40deg);
-    z-index: -1;
-    animation: topHat 3s 6s forwards ease;
-  }
-
-  .box__letter .letter__border {
-    position: absolute;
-    width: 90vw;
-    height: 315px;
-    background-color: var(--color-white);
-    border-radius: 27px;
-    padding: 17px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .letter__border .letter {
-    width: 100%;
-    height: 100%;
-    background-color: var(--color-bg-letter);
-    border-radius: 10px;
-    padding-top: 15px;
-  }
-
-  .letter__border .letter .title__letter {
-    text-align: center;
-    font-family: "Dancing Script", cursive;
-    font-weight: bold;
-    font-size: 1.4rem;
-  }
-
-  .letter__border .letter .content__letter {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    padding-top: 0.7rem;
-    padding-bottom: 70px;
-  }
-
-  .content__letter .right .text__letter {
-    margin-top: -14px;
-    padding: 20px 15px 10px 15px;
-    font-family: "Nerko One", cursive;
-    font-size: 1rem;
-  }
-
-  .content__letter .right .love__img {
-    opacity: 0;
-    position: absolute;
-    right: 126px;
-    top: 167px;
-  }
-
-  .love__img img {
-    width: 84px;
-  }
-
+/* Mobile responsive styles */
+@media screen and (max-width: 1200px) {
   .content .right .image {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    border: 6px solid var(--color-black);
+    width: 350px;
+    height: 350px;
   }
-
-  .name {
-    position: absolute;
-    padding: 0px 3px;
-    bottom: -6px;
-    border: 3px solid var(--color-black);
+  
+  .title {
+    font-size: 2.5rem;
   }
-
-  .name span {
-    font-size: 1rem;
+  
+  .decorate_star.star1 {
+    left: 200px;
   }
-
-  .right .balloon_one {
-    position: absolute;
-    top: 10px;
-    left: -77px;
-    animation: balloon1 2s infinite linear;
+  
+  .decorate_star.star2 {
+    right: 260px;
   }
-
-  .right .balloon_one img {
-    width: 76px !important;
+  
+  .decorate_star.star3 {
+    left: 500px;
+  }
+  
+  .decorate_star.star5 {
+    left: 400px;
+  }
+  
+  .decorate_flower--two {
+    left: 440px;
+  }
+  
+  .decorate_flower--three {
+    right: 135px;
+  }
+  
+  .smiley__icon {
+    left: 500px;
   }
 }
-/* Mobile responsive styles */
+
+@media screen and (max-width: 992px) {
+  .content .right .image {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .title .hat {
+    right: 30px;
+    top: -300px;
+  }
+  
+  .title .hat img {
+    width: 110px;
+  }
+  
+  .decorate_star.star1 {
+    left: 150px;
+  }
+  
+  .decorate_star.star2 {
+    right: 200px;
+  }
+  
+  .decorate_star.star3 {
+    left: 400px;
+  }
+  
+  .decorate_star.star5 {
+    left: 300px;
+  }
+  
+  .decorate_flower--one {
+    left: 30px;
+  }
+  
+  .decorate_flower--two {
+    left: 340px;
+  }
+  
+  .decorate_flower--three {
+    right: 100px;
+  }
+  
+  .smiley__icon {
+    left: 400px;
+  }
+  
+  .box__letter .letter__border {
+    width: 70vw;
+    height: 400px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .content {
     flex-direction: column;
@@ -920,5 +858,259 @@ body {
 
   .btn {
     order: 3;
+  }
+  
+  /* Adjust decorative elements for mobile */
+  .decorate_star.star1 {
+    left: 50px;
+    top: 50px;
+  }
+  
+  .decorate_star.star2 {
+    right: 50px;
+    top: 30px;
+  }
+  
+  .decorate_star.star3 {
+    left: 200px;
+    top: 200px;
+  }
+  
+  .decorate_star.star4 {
+    left: 20px;
+    bottom: 40px;
+  }
+  
+  .decorate_star.star5 {
+    left: 200px;
+    bottom: 100px;
+  }
+  
+  .decorate_flower--one {
+    left: 20px;
+    top: 150px;
+  }
+  
+  .decorate_flower--two {
+    left: 200px;
+    top: 180px;
+  }
+  
+  .decorate_flower--three {
+    right: 30px;
+    top: 100px;
+  }
+  
+  .smiley__icon {
+    left: 150px;
+    bottom: 100px;
+  }
+  
+  .flag__birthday .flag__left,
+  .flag__birthday .flag__right {
+    width: 200px !important;
+  }
+  
+  .flag__birthday .flag__left {
+    transform: rotate(-10deg) translate(-50px, 30px);
+  }
+  
+  .flag__birthday .flag__right {
+    transform: rotate(10deg) translate(50px, 30px) scaleX(-1);
+  }
+  
+  .box__letter .letter__border {
+    width: 90vw;
+    height: 350px;
+  }
+  
+  .letter__border .letter .content__letter {
+    flex-direction: column;
+    padding-top: 0.5rem;
+    padding-bottom: 40px;
+  }
+  
+  .letter__border .letter .content__letter .left,
+  .letter__border .letter .content__letter .right {
+    width: 100%;
+  }
+  
+  .letter__border .letter .content__letter .left {
+    border-right: none;
+    border-bottom: 3px solid var(--color-border);
+    padding: 0.5rem;
+    height: 120px;
+  }
+  
+  .content__letter .left #heart__letter {
+    width: 80px;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .content__letter .left .heart_1 {
+    top: 20px;
+    left: 20px;
+  }
+  
+  .content__letter .left .heart_2 {
+    top: 10px;
+    right: 20px;
+  }
+  
+  .content__letter .left .heart_3 {
+    bottom: 10px;
+    left: 70px;
+  }
+  
+  .content__letter .left .heart_4 {
+    top: 40px;
+    right: 40px;
+  }
+  
+  .content__letter .right .love__img {
+    right: 10px;
+    top: -70px;
+  }
+  
+  .content__letter .right .text__letter {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  .content__letter .right #mewmew {
+    bottom: -10px;
+    right: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .title .hat {
+    right: 30px;
+    top: -220px;
+  }
+  
+  .title .hat img {
+    width: 80px;
+  }
+  
+  .content .right .image {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .name {
+    padding: 3px 10px;
+  }
+  
+  .name span {
+    font-size: 1rem;
+    margin: 0 10px;
+  }
+  
+  .date__of__birth {
+    width: 150px !important;
+    height: 35px !important;
+  }
+  
+  .date__of__birth span {
+    font-size: 0.8rem;
+  }
+  
+  #btn__letter {
+    font-size: 0.9rem;
+    padding: 4px 10px;
+  }
+  
+  .decorate_star.star1 {
+    left: 30px;
+  }
+  
+  .decorate_star.star2 {
+    right: 30px;
+  }
+  
+  .decorate_star.star3 {
+    left: 150px;
+  }
+  
+  .decorate_star.star5 {
+    left: 120px;
+  }
+  
+  .decorate_flower--one {
+    left: 10px;
+  }
+  
+  .decorate_flower--two {
+    left: 150px;
+  }
+  
+  .decorate_flower--three {
+    right: 20px;
+  }
+  
+  .smiley__icon {
+    left: 100px;
+  }
+  
+  .flag__birthday .flag__left,
+  .flag__birthday .flag__right {
+    width: 150px !important;
+  }
+  
+  .box__letter .letter__border {
+    height: 300px;
+    padding: 10px;
+  }
+  
+  .letter__border .letter .title__letter {
+    font-size: 1.8rem;
+  }
+  
+  .content__letter .right .text__letter {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .title .hat {
+    right: 105px;
+    top: -180px;
+  }
+  
+  .title .hat img {
+    width: 60px;
+  }
+  
+  .content .right .image {
+    width: 180px;
+    height: 180px;
+  }
+  
+  .flag__birthday .flag__left,
+  .flag__birthday .flag__right {
+    width: 120px !important;
+  }
+  
+  .box__letter .letter__border {
+    height: 280px;
+  }
+  
+  .letter__border .letter .title__letter {
+    font-size: 1.5rem;
+  }
+  
+  .content__letter .right .text__letter {
+    font-size: 0.8rem;
   }
 }
