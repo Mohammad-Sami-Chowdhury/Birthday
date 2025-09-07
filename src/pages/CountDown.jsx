@@ -58,7 +58,6 @@ const CountDown = () => {
         <div className="content-wrapper">
           {/* Header */}
           <div className="header">
-            <h1 className="title">MOUMITA</h1>
             <p className="subtitle">Something Special Is Coming!</p>
           </div>
 
@@ -152,18 +151,6 @@ const CountDown = () => {
           align-items: center;
           text-align: center;
           margin-bottom: 48px;
-        }
-
-        .title {
-          font-size: 3rem;
-          font-weight: 500;
-          background: linear-gradient(to right, #14b8a6, #3b82f6);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          margin-bottom: 12px;
-          filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
-          line-height: 1.1;
         }
 
         .subtitle {
