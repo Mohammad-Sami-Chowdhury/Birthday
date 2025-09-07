@@ -185,10 +185,10 @@ function PageTwo() {
       <div className="decorate_flower--one" style={{ "--t": "5s" }}>
         <img width="20" src={flower} alt="" />
       </div>
-      <div className="decorate_flower--two" style={{ "--t": "15.3s" }}>
+      <div className="decorate_flower--two" style={{ "--t": "5.3s" }}>
         <img width="20" src={flower} alt="" />
       </div>
-      <div className="decorate_flower--three" style={{ "--t": "15.6s" }}>
+      <div className="decorate_flower--three" style={{ "--t": "5.6s" }}>
         <img width="20" src={flower} alt="" />
       </div>
       <div className="decorate_bottom">
@@ -236,9 +236,6 @@ function PageTwo() {
                   />
                 </div>
                 <div className="right">
-                  <div className="love__img">
-                    <img src={gif1} alt="" width={isMobile ? "120" : "220"} />
-                  </div>
                   <div className="text__letter">
                     <p>{letterText}</p>
                   </div>

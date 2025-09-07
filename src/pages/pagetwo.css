@@ -858,6 +858,7 @@ body {
 
   .btn {
     order: 3;
+    margin-bottom: 20px;
   }
   
   /* Adjust decorative elements for mobile */
@@ -893,7 +894,7 @@ body {
   
   .decorate_flower--two {
     left: 200px;
-    top: 180px;
+    top: 220px;
   }
   
   .decorate_flower--three {
@@ -925,7 +926,7 @@ body {
   }
   
   .letter__border .letter .content__letter {
-    flex-direction: column;
+    flex-direction: row;
     padding-top: 0.5rem;
     padding-bottom: 40px;
   }
@@ -936,14 +937,14 @@ body {
   }
   
   .letter__border .letter .content__letter .left {
-    border-right: none;
-    border-bottom: 3px solid var(--color-border);
+    border-right: 3px solid var(--color-border);
+    border-bottom: none;
     padding: 0.5rem;
     height: 120px;
   }
   
   .content__letter .left #heart__letter {
-    width: 80px;
+    width: 100px;
     margin: 0 auto;
     display: block;
   }
@@ -974,7 +975,7 @@ body {
   }
   
   .content__letter .right .text__letter {
-    margin-top: 20px;
+    margin-top: 0px;
     padding: 10px;
     font-size: 1rem;
   }
