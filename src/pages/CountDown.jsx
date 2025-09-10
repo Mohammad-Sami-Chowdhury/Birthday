@@ -50,11 +50,6 @@ const CountDown = () => {
 
   return (
     <div className="countdown-container">
-<<<<<<< HEAD
-=======
-      {/* Background gradient */}
-      <div className="background-gradient"></div>
-
       {/* Main content */}
       <div className="main-content">
         <div className="content-wrapper">
@@ -70,35 +65,9 @@ const CountDown = () => {
             {renderCountdownUnit(countdown.minutes, "Minutes")}
             {renderCountdownUnit(countdown.seconds, "Seconds")}
           </div>
-
-          {/* Status message */}
-          <div className="status">
-            {countdown.days === 0 &&
-            countdown.hours === 0 &&
-            countdown.minutes === 0 &&
-            countdown.seconds === 0 ? (
-              <p className="time-up">🎉 Time's up! 🎉</p>
-            ) : (
-              <p className="time-remaining">
-                {countdown.days > 0 &&
-                  `${countdown.days} day${countdown.days !== 1 ? "s" : ""}, `}
-                {countdown.hours > 0 &&
-                  `${countdown.hours} hour${
-                    countdown.hours !== 1 ? "s" : ""
-                  }, `}
-                {countdown.minutes > 0 &&
-                  `${countdown.minutes} minute${
-                    countdown.minutes !== 1 ? "s" : ""
-                  }, `}
-                and {countdown.seconds} second
-                {countdown.seconds !== 1 ? "s" : ""} remaining
-              </p>
-            )}
-          </div>
         </div>
       </div>
 
->>>>>>> b2eb35ff9f21178944af75d745f0e1b223ed3cc4
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
         
@@ -336,24 +305,6 @@ const CountDown = () => {
           }
         }
       `}</style>
-
-      {/* Main content */}
-      <div className="main-content">
-        <div className="content-wrapper">
-          {/* Header */}
-          <div className="header">
-            <p className="subtitle">Something Special Is Coming!</p>
-          </div>
-
-          {/* Countdown display */}
-          <div className="countdown-wrapper">
-            {renderCountdownUnit(countdown.days, "Days")}
-            {renderCountdownUnit(countdown.hours, "Hours")}
-            {renderCountdownUnit(countdown.minutes, "Minutes")}
-            {renderCountdownUnit(countdown.seconds, "Seconds")}
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
