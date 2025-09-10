@@ -50,53 +50,6 @@ const CountDown = () => {
 
   return (
     <div className="countdown-container">
-      {/* Background gradient */}
-      <div className="background-gradient"></div>
-
-      {/* Main content */}
-      <div className="main-content">
-        <div className="content-wrapper">
-          {/* Header */}
-          <div className="header">
-            <h1 className="title">MOUMITA</h1>
-            <p className="subtitle">Something Special Is Coming!</p>
-          </div>
-
-          {/* Countdown display */}
-          <div className="countdown-wrapper">
-            {renderCountdownUnit(countdown.days, "Days")}
-            {renderCountdownUnit(countdown.hours, "Hours")}
-            {renderCountdownUnit(countdown.minutes, "Minutes")}
-            {renderCountdownUnit(countdown.seconds, "Seconds")}
-          </div>
-
-          {/* Status message */}
-          <div className="status">
-            {countdown.days === 0 &&
-            countdown.hours === 0 &&
-            countdown.minutes === 0 &&
-            countdown.seconds === 0 ? (
-              <p className="time-up">🎉 Time's up! 🎉</p>
-            ) : (
-              <p className="time-remaining">
-                {countdown.days > 0 &&
-                  `${countdown.days} day${countdown.days !== 1 ? "s" : ""}, `}
-                {countdown.hours > 0 &&
-                  `${countdown.hours} hour${
-                    countdown.hours !== 1 ? "s" : ""
-                  }, `}
-                {countdown.minutes > 0 &&
-                  `${countdown.minutes} minute${
-                    countdown.minutes !== 1 ? "s" : ""
-                  }, `}
-                and {countdown.seconds} second
-                {countdown.seconds !== 1 ? "s" : ""} remaining
-              </p>
-            )}
-          </div>
-        </div>
-      </div>
-
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
         
@@ -118,15 +71,6 @@ const CountDown = () => {
           font-family: 'Inter', sans-serif;
           position: relative;
           overflow: hidden;
-        }
-
-        .background-gradient {
-          position: absolute;
-          inset: 0;
-          z-index: 0;
-          opacity: 0.4;
-          background: linear-gradient(135deg, #9333ea, #3b82f6, #10b981);
-          animation: pulse-slow 20s infinite ease-in-out;
         }
 
         .main-content {
@@ -152,18 +96,6 @@ const CountDown = () => {
           align-items: center;
           text-align: center;
           margin-bottom: 48px;
-        }
-
-        .title {
-          font-size: 3rem;
-          font-weight: 500;
-          background: linear-gradient(to right, #14b8a6, #3b82f6);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          background-clip: text;
-          margin-bottom: 12px;
-          filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
-          line-height: 1.1;
         }
 
         .subtitle {
@@ -245,10 +177,6 @@ const CountDown = () => {
             padding: 20px;
           }
 
-          .title {
-            font-size: 2rem;
-          }
-
           .subtitle {
             font-size: 1rem;
           }
@@ -277,10 +205,6 @@ const CountDown = () => {
         @media (max-width: 480px) {
           .content-wrapper {
             padding: 16px;
-          }
-
-          .title {
-            font-size: 1.75rem;
           }
 
           .subtitle {
@@ -314,10 +238,6 @@ const CountDown = () => {
             padding: 40px;
           }
 
-          .title {
-            font-size: 4rem;
-          }
-
           .subtitle {
             font-size: 1.5rem;
           }
@@ -337,9 +257,6 @@ const CountDown = () => {
         }
 
         @media (min-width: 1280px) {
-          .title {
-            font-size: 5rem;
-          }
 
           .countdown-number {
             font-size: 5rem;
@@ -370,6 +287,24 @@ const CountDown = () => {
           }
         }
       `}</style>
+
+      {/* Main content */}
+      <div className="main-content">
+        <div className="content-wrapper">
+          {/* Header */}
+          <div className="header">
+            <p className="subtitle">Something Special Is Coming!</p>
+          </div>
+
+          {/* Countdown display */}
+          <div className="countdown-wrapper">
+            {renderCountdownUnit(countdown.days, "Days")}
+            {renderCountdownUnit(countdown.hours, "Hours")}
+            {renderCountdownUnit(countdown.minutes, "Minutes")}
+            {renderCountdownUnit(countdown.seconds, "Seconds")}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
