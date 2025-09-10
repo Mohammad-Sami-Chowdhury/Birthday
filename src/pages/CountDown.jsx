@@ -50,6 +50,8 @@ const CountDown = () => {
 
   return (
     <div className="countdown-container">
+<<<<<<< HEAD
+=======
       {/* Background gradient */}
       <div className="background-gradient"></div>
 
@@ -58,7 +60,6 @@ const CountDown = () => {
         <div className="content-wrapper">
           {/* Header */}
           <div className="header">
-            <h1 className="title">MOUMITA</h1>
             <p className="subtitle">Something Special Is Coming!</p>
           </div>
 
@@ -97,6 +98,7 @@ const CountDown = () => {
         </div>
       </div>
 
+>>>>>>> b2eb35ff9f21178944af75d745f0e1b223ed3cc4
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
         
